@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>table</title>
+<link rel="stylesheet" href="sty.css" />
+</head>
+<body>
+<script>
+ 
+const GenerateTable = () => {
+const text = document.getElementById("text").value;
+
+
+if (isNaN(text) || text === "") { alert("enter a valid number"); return;
+}
+
+
+const n = Number(text);
+const box = document.getElementById("box1"); box.innerText = `multiplication table for ${n}:\n`;
+
+for (let i = 1; i <= 10; i++) {
+box.innerText += n + " x " + i + " = " + n * i + "\n";
+}
+};
+</script>
+
+
+<div class="main">
+<div class="input">
+<div class="button">
+<input type="text" name="" id="text" />
+</div>
+<div class="button">
+<button onclick="GenerateTable()">Generate table</button>
+</div>
+ 
+</div>
+<div class="output">
+<div id="box1"></div>
+</div>
+</div>
+</body>
+</html>
